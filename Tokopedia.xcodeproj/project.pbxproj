@@ -417,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = YQP4A2M94J;
 				INFOPLIST_FILE = Tokopedia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -431,6 +432,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = YQP4A2M94J;
 				INFOPLIST_FILE = Tokopedia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -518,6 +521,7 @@
 				45B8423F1F5FAF87006B0606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45B842401F5FAF87006B0606 /* Build configuration list for PBXNativeTarget "TokopediaTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +530,7 @@
 				45B842421F5FAF87006B0606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45B842431F5FAF87006B0606 /* Build configuration list for PBXNativeTarget "TokopediaUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +539,7 @@
 				45B842451F5FAF87006B0606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

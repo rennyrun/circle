@@ -9,5 +9,4 @@ deployment:
   beta_distribution:
     branch: master
     commands:
-      - fastlane add_plugin mobile_center
       - fastlane beta

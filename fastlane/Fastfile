@@ -74,14 +74,13 @@ platform :ios do
       codesigning_identity: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)"
     ) # Build your app - more options available
     #pilot
-    mobile_center_upload(
-      api_token: "bcaaa9c32e804ca3ac81587288da384b",
-      owner_name: "Ferico Samuel",
-      app_name: "Tokopedia",
-      ipa: "./Tokopedia.ipa",
-      group: "Tokopedia",
-      release_notes: "Pops!"
-    )
+    # mobile_center_upload(
+    #   api_token: "bcaaa9c32e804ca3ac81587288da384b",
+    #   owner_name: "Ferico Samuel",
+    #   app_name: "Tokopedia",
+    #   ipa: "./Tokopedia.ipa",
+    #   release_notes: "Pops!"
+    # )
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)

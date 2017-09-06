@@ -9,5 +9,11 @@ deployment:
   beta_distribution:
     branch: master
     commands:
-      - fastlane add_plugin mobile_center
       - fastlane beta
+      - ipa distribute:hockeyapp
+          --file             ./Tokopedia.ipa
+          --token            "bcaaa9c32e804ca3ac81587288da384b"
+          --notes            "CircleCI build $CIRCLE_BUILD_NUM"
+          --commit-sha       "$CIRCLE_SHA1"
+          --build-server-url "$CIRCLE_BUILD_URL"
+          --repository-url   "$CIRCLE_REPOSITORY_URL"

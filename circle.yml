@@ -5,6 +5,10 @@ machine:
   xcode:
     version: 8.3.2
 
+dependencies:
+  pre:
+    - gem install shenzhen
+
 deployment:
   beta_distribution:
     branch: master

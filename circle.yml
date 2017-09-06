@@ -1,6 +1,6 @@
 machine:
   environment:
-    GYM_CODE_SIGNING_IDENTITY: "BDC8F763AF85F7F8C1F567CDF54130731D14992E"
+    GYM_CODE_SIGNING_IDENTITY: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)"
     XCODE_SCHEME: "Tokopedia"
   xcode:
     version: 8.3.2

@@ -33,7 +33,7 @@ platform :ios do
       )
 
       import_certificate(
-        certificate_path: "certificates/S8S35JFX3N.cer",
+        certificate_path: "certificates/ios_distribution.cer",
         keychain_name: ENV["KEYCHAIN_NAME"]
       )
 

@@ -70,7 +70,7 @@ platform :ios do
       scheme: "Tokopedia",
       clean: true,
       sdk: "iphoneos",
-      xcargs: "PROVISIONING_PROFILE_SPECIFIER='842da9bc-ee5f-49ac-8186-f7567051dfe1'",
+      xcargs: "PROVISIONING_PROFILE_SPECIFIER='81e03f04-1232-450c-a2e2-50d34d0c0564'",
       codesigning_identity: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)"
     ) # Build your app - more options available
     #pilot

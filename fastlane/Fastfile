@@ -42,6 +42,19 @@ platform :ios do
         certificate_password: ENV['CERT_PASSWORD'],
         keychain_name: ENV["KEYCHAIN_NAME"]
       )
+
+      import_certificate(
+        certificate_path: "certificates/development_certificates.p12",
+        certificate_password: ENV['CERT_PASSWORD'],
+        keychain_name: ENV["KEYCHAIN_NAME"]
+      )
+
+      import_certificate(
+        certificate_path: "certificates/ios_service_extension.p12",
+        certificate_password: ENV['CERT_PASSWORD'],
+        keychain_name: ENV["KEYCHAIN_NAME"]
+      )
+
   end
 
   desc "Runs all the tests"
@@ -63,16 +76,16 @@ platform :ios do
     import_certificates
     sigh(
       skip_install: true,
-      development: false,
+      adhoc: true,
       force: true
     )
     ENV["PROFILE_UUID"] = lane_context[SharedValues::SIGH_UDID]
     gym(
+      configuration: "AdHoc",
       scheme: "Tokopedia",
-      clean: true,
       sdk: "iphoneos",
       xcargs: "PROVISIONING_PROFILE_SPECIFIER='d9c5b51d-45d6-4ee6-a9ac-d15b37eb92e8'",
-      codesigning_identity: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)"
+      codesigning_identity: "iPhone Developer: Melissa Juminto (TT6A3N9KTC)"
     ) # Build your app - more options available
     #pilot
     # mobile_center_upload(

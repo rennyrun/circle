@@ -48,7 +48,7 @@ platform :ios do
         certificate_password: ENV['CERT_PASSWORD'],
         keychain_name: ENV["KEYCHAIN_NAME"]
       )
-      # 
+      #
       # import_certificate(
       #   certificate_path: "certificates/ios_service_extension.p12",
       #   certificate_password: ENV['CERT_PASSWORD'],
@@ -84,7 +84,7 @@ platform :ios do
       configuration: "AdHoc",
       scheme: "Tokopedia",
       sdk: "iphoneos",
-      xcargs: "PROVISIONING_PROFILE_SPECIFIER='d9c5b51d-45d6-4ee6-a9ac-d15b37eb92e8'",
+      xcargs: "PROVISIONING_PROFILE_SPECIFIER='06196ab5-bbcc-46f6-909e-c967c03f1c5f'",
       codesigning_identity: "iPhone Developer: Melissa Juminto (TT6A3N9KTC)"
     ) # Build your app - more options available
     #pilot

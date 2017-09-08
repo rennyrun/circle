@@ -81,7 +81,8 @@ platform :ios do
     )
     ENV["PROFILE_UUID"] = lane_context[SharedValues::SIGH_UDID]
     gym(
-      configuration: "AdHoc",
+      workspace: "Tokopedia.xcworkspace",
+      configuration: "Ad-Hoc",
       scheme: "Tokopedia",
       sdk: "iphoneos",
       xcargs: "PROVISIONING_PROFILE_SPECIFIER='06196ab5-bbcc-46f6-909e-c967c03f1c5f'",

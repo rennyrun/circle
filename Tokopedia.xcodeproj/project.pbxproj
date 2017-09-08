@@ -14,6 +14,8 @@
 		45B842231F5FAF87006B0606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B842211F5FAF87006B0606 /* LaunchScreen.storyboard */; };
 		45B8422E1F5FAF87006B0606 /* TokopediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B8422D1F5FAF87006B0606 /* TokopediaTests.swift */; };
 		45B842391F5FAF87006B0606 /* TokopediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B842381F5FAF87006B0606 /* TokopediaUITests.swift */; };
+		45FA8C5F1F62B02A00C2EF48 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FA8C5E1F62B02A00C2EF48 /* NotificationService.swift */; };
+		45FA8C631F62B02A00C2EF48 /* ServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 45FA8C5C1F62B02A00C2EF48 /* ServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,28 @@
 			remoteGlobalIDString = 45B842141F5FAF87006B0606;
 			remoteInfo = Tokopedia;
 		};
+		45FA8C611F62B02A00C2EF48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45B8420D1F5FAF87006B0606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45FA8C5B1F62B02A00C2EF48;
+			remoteInfo = ServiceExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45FA8C671F62B02A00C2EF48 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				45FA8C631F62B02A00C2EF48 /* ServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		45B842151F5FAF87006B0606 /* Tokopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +70,9 @@
 		45B842341F5FAF87006B0606 /* TokopediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokopediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B842381F5FAF87006B0606 /* TokopediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokopediaUITests.swift; sourceTree = "<group>"; };
 		45B8423A1F5FAF87006B0606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FA8C5C1F62B02A00C2EF48 /* ServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FA8C5E1F62B02A00C2EF48 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		45FA8C601F62B02A00C2EF48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +97,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45FA8C591F62B02A00C2EF48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +113,7 @@
 				45B842171F5FAF87006B0606 /* Tokopedia */,
 				45B8422C1F5FAF87006B0606 /* TokopediaTests */,
 				45B842371F5FAF87006B0606 /* TokopediaUITests */,
+				45FA8C5D1F62B02A00C2EF48 /* ServiceExtension */,
 				45B842161F5FAF87006B0606 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +124,7 @@
 				45B842151F5FAF87006B0606 /* Tokopedia.app */,
 				45B842291F5FAF87006B0606 /* TokopediaTests.xctest */,
 				45B842341F5FAF87006B0606 /* TokopediaUITests.xctest */,
+				45FA8C5C1F62B02A00C2EF48 /* ServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +160,15 @@
 			path = TokopediaUITests;
 			sourceTree = "<group>";
 		};
+		45FA8C5D1F62B02A00C2EF48 /* ServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				45FA8C5E1F62B02A00C2EF48 /* NotificationService.swift */,
+				45FA8C601F62B02A00C2EF48 /* Info.plist */,
+			);
+			path = ServiceExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +179,12 @@
 				45B842111F5FAF87006B0606 /* Sources */,
 				45B842121F5FAF87006B0606 /* Frameworks */,
 				45B842131F5FAF87006B0606 /* Resources */,
+				45FA8C671F62B02A00C2EF48 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				45FA8C621F62B02A00C2EF48 /* PBXTargetDependency */,
 			);
 			name = Tokopedia;
 			productName = Tokopedia;
@@ -181,6 +227,23 @@
 			productReference = 45B842341F5FAF87006B0606 /* TokopediaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		45FA8C5B1F62B02A00C2EF48 /* ServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FA8C661F62B02A00C2EF48 /* Build configuration list for PBXNativeTarget "ServiceExtension" */;
+			buildPhases = (
+				45FA8C581F62B02A00C2EF48 /* Sources */,
+				45FA8C591F62B02A00C2EF48 /* Frameworks */,
+				45FA8C5A1F62B02A00C2EF48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServiceExtension;
+			productName = ServiceExtension;
+			productReference = 45FA8C5C1F62B02A00C2EF48 /* ServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +271,11 @@
 						ProvisioningStyle = Manual;
 						TestTargetID = 45B842141F5FAF87006B0606;
 					};
+					45FA8C5B1F62B02A00C2EF48 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = YQP4A2M94J;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 45B842101F5FAF87006B0606 /* Build configuration list for PBXProject "Tokopedia" */;
@@ -226,6 +294,7 @@
 				45B842141F5FAF87006B0606 /* Tokopedia */,
 				45B842281F5FAF87006B0606 /* TokopediaTests */,
 				45B842331F5FAF87006B0606 /* TokopediaUITests */,
+				45FA8C5B1F62B02A00C2EF48 /* ServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +318,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		45B842321F5FAF87006B0606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FA8C5A1F62B02A00C2EF48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,6 +359,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45FA8C581F62B02A00C2EF48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FA8C5F1F62B02A00C2EF48 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -295,6 +379,11 @@
 			isa = PBXTargetDependency;
 			target = 45B842141F5FAF87006B0606 /* Tokopedia */;
 			targetProxy = 45B842351F5FAF87006B0606 /* PBXContainerItemProxy */;
+		};
+		45FA8C621F62B02A00C2EF48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45FA8C5B1F62B02A00C2EF48 /* ServiceExtension */;
+			targetProxy = 45FA8C611F62B02A00C2EF48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -416,6 +505,7 @@
 		45B8423E1F5FAF87006B0606 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -435,6 +525,7 @@
 		45B8423F1F5FAF87006B0606 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -509,6 +600,36 @@
 			};
 			name = Release;
 		};
+		45FA8C641F62B02A00C2EF48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = YQP4A2M94J;
+				INFOPLIST_FILE = ServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tokopedia.Tokopedia.ServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		45FA8C651F62B02A00C2EF48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = YQP4A2M94J;
+				INFOPLIST_FILE = ServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tokopedia.Tokopedia.ServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -547,6 +668,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		45FA8C661F62B02A00C2EF48 /* Build configuration list for PBXNativeTarget "ServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FA8C641F62B02A00C2EF48 /* Debug */,
+				45FA8C651F62B02A00C2EF48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

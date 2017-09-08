@@ -273,8 +273,7 @@
 					};
 					45FA8C5B1F62B02A00C2EF48 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = YQP4A2M94J;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -516,8 +515,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tokopedia.Tokopedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5cd5ef7e-4f55-488f-83e1-013b22bcfabb";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.tokopedia.Tokopedia";
+				PROVISIONING_PROFILE = "06196ab5-bbcc-46f6-909e-c967c03f1c5f";
+				PROVISIONING_PROFILE_SPECIFIER = "AdHoc Distribution New";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -536,8 +535,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tokopedia.Tokopedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5cd5ef7e-4f55-488f-83e1-013b22bcfabb";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.tokopedia.Tokopedia";
+				PROVISIONING_PROFILE = "06196ab5-bbcc-46f6-909e-c967c03f1c5f";
+				PROVISIONING_PROFILE_SPECIFIER = "AdHoc Distribution New";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -610,6 +609,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tokopedia.Tokopedia.ServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3df60903-fec4-45f6-bd06-b42ee1fd8952";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.tokopedia.Tokopedia.ServiceExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -620,11 +621,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = YQP4A2M94J;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ServiceExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tokopedia.Tokopedia.ServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};

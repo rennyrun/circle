@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Tokopedia.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "45FA8C5B1F62B02A00C2EF48"
+               BuildableName = "ServiceExtension.appex"
+               BlueprintName = "ServiceExtension"
+               ReferencedContainer = "container:Tokopedia.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

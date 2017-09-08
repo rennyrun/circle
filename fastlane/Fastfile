@@ -85,7 +85,7 @@ platform :ios do
       scheme: "Tokopedia",
       sdk: "iphoneos",
       xcargs: "PROVISIONING_PROFILE_SPECIFIER='06196ab5-bbcc-46f6-909e-c967c03f1c5f'",
-      codesigning_identity: "iPhone Developer: Melissa Juminto (TT6A3N9KTC)"
+      codesigning_identity: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)"
     ) # Build your app - more options available
     #pilot
     # mobile_center_upload(

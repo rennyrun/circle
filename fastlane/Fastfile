@@ -18,7 +18,7 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-  ENV['KEYCHAIN_NAME'] = "circle.keychain"
+  ENV['KEYCHAIN_NAME'] = "CircleCI.keychain"
 
   end
 
@@ -85,6 +85,7 @@ platform :ios do
       scheme: "Tokopedia",
       clean: true,
       sdk: "iphoneos",
+      workspace: "Tokopedia.xcodeproj",
       # xcargs: "PROVISIONING_PROFILE_SPECIFIER='06196ab5-bbcc-46f6-909e-c967c03f1c5f'",
       codesigning_identity: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)",
       # We added this right here to make things work

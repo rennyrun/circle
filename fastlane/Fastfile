@@ -75,7 +75,7 @@ platform :ios do
     import_certificates
     sigh(
       skip_install: true,
-      adhoc: true
+      adhoc: true,
       force: true
     )
     ENV["PROFILE_UUID"] = lane_context[SharedValues::SIGH_UDID]

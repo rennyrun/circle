@@ -67,7 +67,7 @@ private_lane :generateProfiles do |options|
         build_number: build_number
     })
     disable_automatic_code_signing(path: project_file)
-    generateProfiles(type: "Adhoc", identifier: "com.tokopedia.Tokopedia")
+    generateProfiles(type: "adhoc", identifier: "com.tokopedia.Tokopedia")
     # sigh(
     #   skip_install: true,
     #   adhoc: true,

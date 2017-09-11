@@ -84,8 +84,15 @@ platform :ios do
       scheme: "Tokopedia",
       clean: true,
       sdk: "iphoneos",
-      xcargs: "PROVISIONING_PROFILE_SPECIFIER='06196ab5-bbcc-46f6-909e-c967c03f1c5f'",
+      # xcargs: "PROVISIONING_PROFILE_SPECIFIER='06196ab5-bbcc-46f6-909e-c967c03f1c5f'",
       codesigning_identity: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)"
+      # We added this right here to make things work
+       export_options: {
+         provisioningProfiles: {
+           "com.tokopedia.Tokopedia": "06196ab5-bbcc-46f6-909e-c967c03f1c5f",
+           "com.tokopedia.Tokopedia.ServiceExtension": "6b9dd6c4-e580-48f0-86aa-a96a0f29f3d3"
+         }
+       }
     ) # Build your app - more options available
     #pilot
     # mobile_center_upload(

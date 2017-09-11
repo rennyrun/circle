@@ -23,9 +23,6 @@ platform :ios do
   end
 
   def import_certificates
-      begin
-
-      puts 'Importing certificates...'
       unlock_keychain(
         path: ENV['KEYCHAIN_NAME'],
         password: ENV['KEYCHAIN_PASSWORD']
@@ -53,10 +50,6 @@ platform :ios do
         keychain_name: ENV["KEYCHAIN_NAME"]
       )
       puts 'Certificates imported succesfully.'
-
-    rescue
-
-    puts 'Certificates were already imported to the keychain before.'
 
   end
 

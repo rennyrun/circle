@@ -273,6 +273,7 @@
 					};
 					45FA8C5B1F62B02A00C2EF48 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = YQP4A2M94J;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -621,12 +622,13 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YQP4A2M94J;
 				INFOPLIST_FILE = ServiceExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tokopedia.Tokopedia.ServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3df60903-fec4-45f6-bd06-b42ee1fd8952";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.tokopedia.Tokopedia.ServiceExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};

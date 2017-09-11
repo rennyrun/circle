@@ -48,12 +48,11 @@ platform :ios do
         certificate_password: ENV['CERT_PASSWORD'],
         keychain_name: ENV["KEYCHAIN_NAME"]
       )
-      #
-      # import_certificate(
-      #   certificate_path: "certificates/ios_service_extension.p12",
-      #   certificate_password: ENV['CERT_PASSWORD'],
-      #   keychain_name: ENV["KEYCHAIN_NAME"]
-      # )
+
+      import_certificate(
+        certificate_path: "certificates/distribution_service_extension.cer",
+        keychain_name: ENV["KEYCHAIN_NAME"]
+      )
 
   end
 

@@ -74,7 +74,6 @@ platform :ios do
     disable_automatic_code_signing(path: project_file)
     import_certificates
     sigh(
-      app_identifier: ENV["BUNDLE_IDENTIFIER"],
       skip_install: true,
       adhoc: true,
       force: true

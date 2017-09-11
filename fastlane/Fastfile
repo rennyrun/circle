@@ -18,20 +18,19 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-  ENV['KEYCHAIN_NAME'] = "login.keychain"
-  ENV["KEYCHAIN_PASSWORD"] = "circle"
+  ENV['KEYCHAIN_NAME'] = "CircleCI.keychain"
 
   end
 
   def import_certificates
-      # create_keychain(
-      #   name: ENV["KEYCHAIN_NAME"],
-      #   default_keychain: true,
-      #   unlock: true,
-      #   timeout: 3600,
-      #   lock_when_sleeps: true,
-      #   password: ENV["KEYCHAIN_PASSWORD"]
-      # )
+      create_keychain(
+        name: ENV["KEYCHAIN_NAME"],
+        default_keychain: true,
+        unlock: true,
+        timeout: 3600,
+        lock_when_sleeps: true,
+        password: ENV["KEYCHAIN_PASSWORD"]
+      )
 
       import_certificate(
         certificate_path: "certificates/ios_distribution.cer",
@@ -72,12 +71,12 @@ platform :ios do
         xcodeproj: project_file,
         build_number: build_number
     })
-    # disable_automatic_code_signing(path: project_file)
-    # import_certificates
+    disable_automatic_code_signing(path: project_file)
+    import_certificates
     sigh(
       skip_install: true,
       adhoc: true
-      # force: true
+      force: true
     )
     ENV["PROFILE_UUID"] = lane_context[SharedValues::SIGH_UDID]
     gym(

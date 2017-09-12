@@ -38,7 +38,7 @@ private_lane :generateProfiles do |options|
           app_identifier: identifier,
           keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
           keychain_password: ENV["MATCH_PASSWORD"],
-          readonly: true,
+          readonly: false,
           verbose: false,
           force_for_new_devices: true
       )
@@ -48,7 +48,7 @@ private_lane :generateProfiles do |options|
           app_identifier: identifier + ".ServiceExtension",
           keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
           keychain_password: ENV["MATCH_PASSWORD"],
-          readonly: true,
+          readonly: false,
           verbose: false,
           force_for_new_devices: true
       )

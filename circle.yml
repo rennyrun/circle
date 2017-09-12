@@ -22,7 +22,6 @@ deployment:
   beta_distribution:
     branch: master
     commands:
-      - fastlane beta
       - ipa distribute:hockeyapp
           --file             ./Tokopedia.ipa
           --token            "bcaaa9c32e804ca3ac81587288da384b"

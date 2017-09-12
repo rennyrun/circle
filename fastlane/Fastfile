@@ -19,7 +19,7 @@ platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
     ENV['KEYCHAIN_NAME'] = "CircleCI.keychain"
-
+    ENV["KEYCHAIN_PASSWORD"] = "tokopedia789"
   end
 
   def import_certificates
@@ -34,12 +34,12 @@ platform :ios do
     )
 
     import_certificate(
-      certificate_path: "./QRB8TY9GT9.cer",
+      certificate_path: "certificates/QRB8TY9GT9.cer",
       keychain_name: ENV["KEYCHAIN_NAME"]
     )
 
     import_certificate(
-      certificate_path: "./QRB8TY9GT9.p12",
+      certificate_path: "certificates/QRB8TY9GT9.p12",
       keychain_name: ENV["KEYCHAIN_NAME"]
     )
 end

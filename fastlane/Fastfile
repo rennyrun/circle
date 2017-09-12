@@ -49,9 +49,8 @@ platform :ios do
     ENV["PROFILE_UUID"] = lane_context[SharedValues::SIGH_UDID]
     gym(
       scheme: "Tokopedia",
-      xcargs: "PROVISIONING_PROFILE_SPECIFIER=['86808041-e174-4928-871b-8472084142a0','65161ac4-c791-4050-9e3b-ff10050d5cba']",
       codesigning_identity: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)",
-
+      use_legacy_build_api: true
     ) # Build your app - more options available
     # pilot
 

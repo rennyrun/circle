@@ -50,7 +50,7 @@ platform :ios do
     gym(
       scheme: "Tokopedia",
       codesigning_identity: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)",
-      use_legacy_build_api: true
+      export_method: "ad-hoc"
     ) # Build your app - more options available
     # pilot
 

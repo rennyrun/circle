@@ -20,7 +20,7 @@ platform :ios do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
   create_keychain(
     name: ENV["MATCH_KEYCHAIN_NAME"],
-    password: ENV["MATCH_PASSWORD"],
+    password: ENV["MATCH_KEYCHAIN_PASSWORD"],
     default_keychain: true,
     unlock: true,
     timeout: 3600,
@@ -41,7 +41,7 @@ private_lane :generateProfiles do |options|
           type: type,
           app_identifier: identifier,
           keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
-          keychain_password: ENV["MATCH_PASSWORD"],
+          keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"],
           readonly: false,
           verbose: false,
           force_for_new_devices: true
@@ -51,7 +51,7 @@ private_lane :generateProfiles do |options|
           type: type,
           app_identifier: identifier + ".ServiceExtension",
           keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
-          keychain_password: ENV["MATCH_PASSWORD"],
+          keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"],
           readonly: false,
           verbose: false,
           force_for_new_devices: true

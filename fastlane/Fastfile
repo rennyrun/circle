@@ -18,9 +18,22 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-
+    ENV['KEYCHAIN_NAME'] = "cirlce.keychain"
 
   end
+
+  def import_certificates
+
+    import_certificate(
+      certificate_path: "./QRB8TY9GT9.cer",
+      keychain_name: ENV["KEYCHAIN_NAME"]
+    )
+
+    import_certificate(
+      certificate_path: "./QRB8TY9GT9.p12",
+      keychain_name: ENV["KEYCHAIN_NAME"]
+    )
+end
 
   desc "Runs all the tests"
   lane :test do
@@ -37,6 +50,7 @@ platform :ios do
         xcodeproj: project_file,
         build_number: build_number
     })
+    import_certificates
     disable_automatic_code_signing(path: project_file)
     sigh(
       app_identifier: "com.tokopedia.Tokopedia",

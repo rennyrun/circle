@@ -18,44 +18,7 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-  create_keychain(
-    name: ENV["MATCH_KEYCHAIN_NAME"],
-    password: ENV["MATCH_KEYCHAIN_PASSWORD"],
-    default_keychain: true,
-    unlock: true,
-    timeout: 3600,
-    add_to_search_list: true,
-    verbose: true
-)
 
-  end
-
-private_lane :generateProfiles do |options|
-      type = options[:type]
-      identifier = options[:identifier]
-      # import_certificate(
-      #   certificate_path: "./WWDR.cer",
-      #   keychain_name: ENV["MATCH_KEYCHAIN_NAME"]
-      # )
-      match(
-          type: type,
-          app_identifier: identifier,
-          keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
-          keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"],
-          readonly: false,
-          verbose: false,
-          force_for_new_devices: true
-      )
-
-      match(
-          type: type,
-          app_identifier: identifier + ".ServiceExtension",
-          keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
-          keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"],
-          readonly: false,
-          verbose: false,
-          force_for_new_devices: true
-      )
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
@@ -69,13 +32,18 @@ private_lane :generateProfiles do |options|
         build_number: build_number
     })
     disable_automatic_code_signing(path: project_file)
-    generateProfiles(type: "adhoc", identifier: "com.tokopedia.Tokopedia")
-    # sigh(
-    #   skip_install: true,
-    #   adhoc: true,
-    #   force: true
-    # )
-    
+    sigh(
+      app_identifier: "com.tokopedia.Tokopedia",
+      skip_install: true,
+      adhoc: true,
+      force: true
+    )
+    sigh(
+      app_identifier: "com.tokopedia.Tokopedia.ServiceExtension",
+      skip_install: true,
+      adhoc: true,
+      force: true
+    )
     gym(
       scheme: "Tokopedia",
       clean: true,
@@ -121,10 +89,6 @@ private_lane :generateProfiles do |options|
     # slack(
     #   message: "Successfully deployed new App Update."
     # )
-
-    delete_keychain(
-            name: ENV["KEYCHAIN_NAME"]
-      )
   end
 
   error do |lane, exception|

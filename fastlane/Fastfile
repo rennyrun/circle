@@ -75,17 +75,7 @@ private_lane :generateProfiles do |options|
     #   adhoc: true,
     #   force: true
     # )
-
-    update_project_provisioning(
-      xcodeproj: project_file,
-      profile: "./1bd2c256-257c-49e0-8909-337d43ed3bb1.mobileprovision"
-     )
-
-     update_project_provisioning(
-      xcodeproj: project_file,
-      profile: "./64e0c08c-2f71-44e7-90fb-7b0cef472711.mobileprovision"
-     )
-     
+    
     gym(
       scheme: "Tokopedia",
       clean: true,

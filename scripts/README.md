@@ -1,0 +1,1 @@
+[http://stevenlu.com/posts/2015/08/18/circleci-ios-builds-to-hockeyapp/](http://localhost:4000/posts/2015/08/18/circleci-ios-builds-to-hockeyapp/)

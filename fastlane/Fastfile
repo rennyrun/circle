@@ -21,29 +21,7 @@ platform :ios do
     ENV['KEYCHAIN_NAME'] = "CircleCI.keychain"
     ENV["KEYCHAIN_PASSWORD"] = "tokopedia789"
   end
-
-  def import_certificates
-
-    create_keychain(
-      name: ENV["KEYCHAIN_NAME"],
-      default_keychain: true,
-      unlock: true,
-      timeout: 3600,
-      lock_when_sleeps: true,
-      password: ENV["KEYCHAIN_PASSWORD"]
-    )
-
-    import_certificate(
-      certificate_path: "certificates/QRB8TY9GT9.cer",
-      keychain_name: ENV["KEYCHAIN_NAME"]
-    )
-
-    import_certificate(
-      certificate_path: "certificates/QRB8TY9GT9.p12",
-      keychain_name: ENV["KEYCHAIN_NAME"]
-    )
-end
-
+  
   desc "Runs all the tests"
   lane :test do
     scan
@@ -59,7 +37,6 @@ end
         xcodeproj: project_file,
         build_number: build_number
     })
-    import_certificates
     disable_automatic_code_signing(path: project_file)
     sigh(
       app_identifier: "com.tokopedia.Tokopedia",

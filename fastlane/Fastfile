@@ -33,10 +33,10 @@ platform :ios do
 private_lane :generateProfiles do |options|
       type = options[:type]
       identifier = options[:identifier]
-      import_certificate(
-        certificate_path: "./WWDR.cer",
-        keychain_name: ENV["MATCH_KEYCHAIN_NAME"]
-      )
+      # import_certificate(
+      #   certificate_path: "./WWDR.cer",
+      #   keychain_name: ENV["MATCH_KEYCHAIN_NAME"]
+      # )
       match(
           type: type,
           app_identifier: identifier,

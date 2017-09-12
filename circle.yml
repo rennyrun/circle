@@ -12,6 +12,7 @@ dependencies:
   pre:
     - security unlock-keychain       -p circle circle.keychain
     - security set-keychain-settings -lut 7200 circle.keychain
+    - security list-keychains -s circle
     - gem install shenzhen
 
 deployment:

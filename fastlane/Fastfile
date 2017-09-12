@@ -18,11 +18,20 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    ENV['KEYCHAIN_NAME'] = "cirlce.keychain"
+    ENV['KEYCHAIN_NAME'] = "CircleCI.keychain"
 
   end
 
   def import_certificates
+
+    create_keychain(
+      name: ENV["KEYCHAIN_NAME"],
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: true,
+      password: ENV["KEYCHAIN_PASSWORD"]
+    )
 
     import_certificate(
       certificate_path: "./QRB8TY9GT9.cer",
@@ -60,6 +69,7 @@ end
       app_identifier: "com.tokopedia.Tokopedia.ServiceExtension",
       adhoc: true
     )
+    ENV["PROFILE_UUID"] = lane_context[SharedValues::SIGH_UDID]
     gym(
       scheme: "Tokopedia",
       xcargs: "PROVISIONING_PROFILE_SPECIFIER='86808041-e174-4928-871b-8472084142a0'",

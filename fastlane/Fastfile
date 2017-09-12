@@ -21,7 +21,7 @@ platform :ios do
     ENV['KEYCHAIN_NAME'] = "CircleCI.keychain"
     ENV["KEYCHAIN_PASSWORD"] = "tokopedia789"
   end
-  
+
   desc "Runs all the tests"
   lane :test do
     scan

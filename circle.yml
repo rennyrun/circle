@@ -1,11 +1,11 @@
 machine:
   environment:
+    xcode:
+      version: 8.3.2
     GYM_CODE_SIGNING_IDENTITY: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)"
     XCODE_SCHEME: "Tokopedia"
     MATCH_KEYCHAIN_NAME: "circle"
     MATCH_KEYCHAIN_PASSWORD: "circle"
-    xcode:
-      version: 8.3.2
 
 dependencies:
   pre:

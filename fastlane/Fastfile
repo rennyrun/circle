@@ -11,7 +11,7 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.90.0"
+fastlane_version "2.55.0"
 
 default_platform :ios
 
@@ -19,54 +19,20 @@ platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
 
+
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
     # match(type: "appstore") # more information: https://codesigning.guide
-    project_file = 'Tokopedia.xcodeproj'
-    build_number = Time.new.strftime("%Y%m%d%H%M")
-    increment_build_number({
-        xcodeproj: project_file,
-        build_number: build_number
-    })
-    disable_automatic_code_signing(path: project_file)
-    sigh(
-      app_identifier: "com.tokopedia.Tokopedia",
-      skip_install: true,
-      adhoc: true,
-      force: true
-    )
-    sigh(
-      app_identifier: "com.tokopedia.Tokopedia.ServiceExtension",
-      skip_install: true,
-      adhoc: true,
-      force: true
-    )
-    gym(
-      scheme: "Tokopedia",
-      clean: true,
-      sdk: "iphoneos",
-      # workspace: "Tokopedia.xcodeproj",
-      # xcargs: "PROVISIONING_PROFILE_SPECIFIER='06196ab5-bbcc-46f6-909e-c967c03f1c5f'",
-      codesigning_identity: "iPhone Distribution: TOKOPEDIA PT (YQP4A2M94J)"
-      # We added this right here to make things work
-      #  export_options: {
-      #    provisioningProfiles: {
-      #      "com.tokopedia.Tokopedia": "06196ab5-bbcc-46f6-909e-c967c03f1c5f",
-      #      "com.tokopedia.Tokopedia.ServiceExtension": "6b9dd6c4-e580-48f0-86aa-a96a0f29f3d3"
-      #    }
-      #  }
-    ) # Build your app - more options available
-    #pilot
-    # mobile_center_upload(
-    #   api_token: "bcaaa9c32e804ca3ac81587288da384b",
-    #   owner_name: "Ferico Samuel",
-    #   app_name: "Tokopedia",
-    #   ipa: "./Tokopedia.ipa",
-    #   release_notes: "Pops!"
-    # )
+    gym(scheme: "Tokopedia") # Build your app - more options available
+    # pilot
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)

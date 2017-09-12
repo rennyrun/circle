@@ -19,4 +19,4 @@ Nikmati aktivasi TokoCash langsung di aplikasi & mulailah bertransaksi dengan To
 
 6. Perbaikan Kendala Login menggunakan Google Sign In
 
-7. Perbaikan performansi versi sebelumnya yang terasa lamban
+7. Perbaikan Performansi versi sebelumnya yang terasa Lamban
